@@ -1,8 +1,28 @@
+function count_To_Ten() {
+    var Digit = "";
+    var X = 1; // Count begins at 1
+    while (X < 11) { // Gives a counter
+        Digit += "<br>" + X;
+        X++; // Adds increments
+    }
+    document.getElementById("Counting_to_Ten").innerHTML = count_To_Ten();
+}
+
+var Instuments = ["Guitar", "Drums", "Piano", "Sax"]; // Array
+var Content = "";
+var Y;
+function for_Loop() {
+    for (Y = 0; Y < Instruments.length; Y++) {
+        Content += Instruments[Y] + "<br>";
+    }
+    document.getElementById("List_of_Instruments").innerHTML = Content;
+}
+
 function constant_function() {
-    const Musical_Instrument = { type: "guitar", brand: "Fender", color: "black" };
-    Musical_Instrument.color = "black";
-    Musical_Instrument.price = "$800";
-    document.getElementById("Constant").innerHTML = "The cost of the " +
+    const Musical_Instrument = { type: "guitar", brand: "Fender", color: "black" }; // Sets types
+    Musical_Instrument.color = "black"; // Sets instrument color
+    Musical_Instrument.price = "$800"; // Sets instrument price
+    document.getElementById("Constant").innerHTML = "The cost of the " + // Concatenation
         Musical_Instrument.type + " was " + Musical_Instrument.price;
 }
 
@@ -15,6 +35,17 @@ document.write(X);
 document.write("<br>" + X);
 
 function myFunction() {
-    return Math.PI;
+    return Math.PI; // Returns value of Pi
 }
 document.getElementById("Pie").innerHTML = myFunction();
+
+let car = { // Creates object with description
+    make: "Dodge ",
+    model: "Viper ",
+    year: "2021 ",
+    color: "red ",
+    description: function () {
+        return "The car is a " + this.year + this.color + this.make + this.model;
+    }
+}
+document.getElementById("Car_Object").innerHTML = car.description();
