@@ -5,10 +5,10 @@ function count_To_Ten() {
         Digit += "<br>" + X;
         X++; // Adds increments
     }
-    document.getElementById("Counting_to_Ten").innerHTML = count_To_Ten();
+    document.getElementById("Counting_to_Ten").innerHTML = Digit;
 }
 
-var Instuments = ["Guitar", "Drums", "Piano", "Sax"]; // Array
+var Instruments = ["Guitar", "Drums", "Piano", "Sax"]; // Array
 var Content = "";
 var Y;
 function for_Loop() {
@@ -33,19 +33,3 @@ document.write(X);
     document.write("<br>" + X);
 }
 document.write("<br>" + X);
-
-function myFunction() {
-    return Math.PI; // Returns value of Pi
-}
-document.getElementById("Pie").innerHTML = myFunction();
-
-let car = { // Creates object with description
-    make: "Dodge ",
-    model: "Viper ",
-    year: "2021 ",
-    color: "red ",
-    description: function () {
-        return "The car is a " + this.year + this.color + this.make + this.model;
-    }
-}
-document.getElementById("Car_Object").innerHTML = car.description();

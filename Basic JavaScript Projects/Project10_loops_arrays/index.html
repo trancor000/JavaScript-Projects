@@ -13,11 +13,25 @@
     <p id="Constant"></p>
     <button onclick="constant_function()">Constant</button>
     <p id="Pie"></p>
-    <button onclick="myFunction()">Pi</button>
-    <p id="Car_Objects"></p>
-    <button onclick="description()">Car</button>
+    <p id="Car_Object"></p>
 
+    <script>
+        function myFunction() {
+            return Math.PI; // Returns value of Pi
+        }
+        document.getElementById("Pie").innerHTML = myFunction();
 
+        let car = { // Creates object with description
+            make: "Dodge ",
+            model: "Viper ",
+            year: "2021 ",
+            color: "red ",
+            description: function () {
+                return "The car is a " + this.year + this.color + this.make + this.model;
+            }
+        }
+        document.getElementById("Car_Object").innerHTML = car.description();
+    </script>
 </body>
 
 </html>
